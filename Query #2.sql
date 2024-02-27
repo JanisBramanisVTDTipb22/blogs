@@ -1,5 +1,5 @@
--- CREATE DATABASE blog_jānis_bramanis;
--- USE blog_jānis_bramanis;
+-- CREATE DATABASE blog_janis_bramanis;
+-- USE blog_janis_bramanis;
 /*
 CREATE TABLE posts (
 id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
