@@ -1,6 +1,6 @@
 <?php
 
-class database {
+class Database {
     
     private $pdo;
 
@@ -9,7 +9,6 @@ class database {
         
         //dd(http_build_query($config, "", ";"));
         $connection_string = "mysql:" . http_build_query($config, "", ";");
-        //$connection_string = "mysql:host=$config[host];dbname=$config[dbname];user=$config[user];password=$config[password];charset=$config[charset]";
         $this->pdo = new PDO($connection_string);
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
