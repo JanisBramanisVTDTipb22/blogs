@@ -5,6 +5,7 @@ require "functions.php";
 require "Database.php";
 
 
+
 $config = require("config.php");
 
 $query = "SELECT * FROM posts";
@@ -30,4 +31,6 @@ $posts = $db
           ->execute($query, $params)
           ->fetchAll();
 
-require "index.view.php";
+$title = "about us";
+require "views/index.view.php";
+

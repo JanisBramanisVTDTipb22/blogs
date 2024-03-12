@@ -1,4 +1,8 @@
-<form>
+<?php
+ require "components/head.php";
+ require "components/navbar.php"; 
+?>
+    <form>
   <input name='id' value='<?php ($_GET["id"] ?? "") ?>'/>
   <button>Filter by ID</button>
 </form>
@@ -27,3 +31,7 @@ Category:
   <?php } ?>
 
 </ul>
+
+<?php 
+require "components/footer.php";
+?>
