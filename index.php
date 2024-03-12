@@ -4,6 +4,7 @@
 require "functions.php";
 require "Database.php";
 
+
 $config = require("config.php");
 
 $query = "SELECT * FROM posts";
@@ -29,33 +30,4 @@ $posts = $db
           ->execute($query, $params)
           ->fetchAll();
 
-
-echo "<form>";
-echo "<input name='id' value='" . ($_GET["id"] ?? "") ."'/>";
-echo "<button>Filter by ID</button>";
-echo "</form>";
-
-echo "<form>";
-//$mainigais = ($x < 5) ? "ja" : "ne";
-echo "<input name='category' value='" . ($_GET["category"] ?? "") . "'/>";
-echo "<button>Filter by category</button>";
-echo "</form>";
-
-echo "<form>";
-echo "<Category: ";
-echo "<select name='category'>";
-echo "<option value='sport'>Sport</option>";
-echo "<option value='music'>Music</option>";
-echo "<option value='food'>Food</option>";
-echo "</select>";
-echo "<br>";
-echo "<button>Submit</button>";
-echo "</form>";
-
-echo "<h1>Posts</h1>";
-
-echo "<ul>";
-foreach($posts as $post) {
-  echo "<li>" . $post["title"] . "</li>";
-}
-echo "</ul>";
+require "index.view.php";
