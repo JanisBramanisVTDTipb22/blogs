@@ -19,8 +19,8 @@ class Database {
         $query = $this->pdo->prepare($query_string);
     
     //izpildīt sql
-    $query->execute();
+    //$query->execute();
     //atgriez rezultātus
-    return $query;  
+    return $query;      
     }
 }
