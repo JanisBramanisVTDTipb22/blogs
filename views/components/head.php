@@ -7,6 +7,3 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <title><?php $title ?></title>
-</body>
-</html>
