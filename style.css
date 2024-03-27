@@ -1,5 +1,5 @@
 body {
-    background-color: saddlebrown;
+    background-color: brown;
   }
 h1 {
   color: seagreen;
@@ -14,4 +14,25 @@ p {
 li {
   color: violet;
   font-size: 0.5px;
+}
+
+nav {
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+}
+
+.invalid-data {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: rebeccapurple;
+  font-size: 0.8em;
 }
