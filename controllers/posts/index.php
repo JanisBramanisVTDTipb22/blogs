@@ -38,5 +38,5 @@ $posts = $db
 
 
 $title = "No!";
-require "./views/posts.view.php";
+require "./views/posts/index.view.php";
 ?>

@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
+        
     $query = "INSERT INTO posts (title, category_id) 
         VALUES (:title, :category_id);";
         $params = [
@@ -33,4 +34,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //dd($_SERVER);
 
 $title = "cancer";
-require "views/posts.create.view.php";
+require "views/posts/create.view.php";
