@@ -12,17 +12,15 @@ require "views/components/navbar.php";
     <h1> Posts </h1>
     <ul>
         <?php foreach ($posts as $post) { ?>
-             <!-- <?php dd($posts); ?> -->
-             <?php dd($post); ?>
             <li>
-                <a href="/show?id=<?= $post["id"] ?>"><?= htmlspecialchars($post["title"])?></a>
-                <form class="delete-form" method="POST" action="/delete" >
-                <button class="test" name="id" value="<?= $_post["id"] ?>"></button>
-                <button>delete</button></form>
+            <a href="/show?id=<?= $post["id"] ?>"> <?= htmlspecialchars($post["title"])?> 
+            <form class="deleteform" method="POST" action="/delete">
+            <button class="test" name="id" value="<?= $post["id"] ?>">Delete</button>
+            </form>
             </li>
         <?php } ?>
+
     </ul>
-    
 <?php 
 require "views/components/footer.php";
 ?>
