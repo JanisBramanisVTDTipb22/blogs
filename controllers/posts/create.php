@@ -11,11 +11,11 @@ $db = new Database($config);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
-    if(!Validator::string($_POST["title"], min:1, max:255)) {
+    if(!Validator::string($_POST["title"], 1, 255)) {
         $errors["title"] = "no title or too long";
     }
 
-    if(!Validator::number($_POST["category-id"], min:1, max:255)) {
+    if(!Validator::number($_POST["category-id"], 1, 255)) {
         $errors["category-id"] = "wrong category-id";
     }
     if (empty($errors)) {

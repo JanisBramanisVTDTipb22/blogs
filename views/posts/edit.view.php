@@ -3,7 +3,8 @@ require "views/components/head.php";
 ?>
     <h1> Create a Post </h1>
     <form method="POST">
-        <label>Title
+        <input name="id" value="<?= $post["id"] ?>" type="hidden"/>
+        <label>Title:
             <input name="title" value="<?= $post["title"] ?? "" ?>"/>
             <?php if (isset($errors["title"])) { ?>
                 <p class="invalid-data"> <?= $errors["title"] ?> </p>
@@ -20,6 +21,7 @@ require "views/components/head.php";
     <?php } ?>
         </label>
         <button>Edit</button>
+        
     </form>
 <?php
 require "views/components/footer.php";  
