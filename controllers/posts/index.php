@@ -31,10 +31,10 @@ if(isset($_GET["id"]))
     }
 }
 
-if(isset($_GET["cat_name"]))
+if(isset($_GET["category_name"]))
 {
-    if($_GET["cat_name"] == "show_all" || $_GET["cat_name"] == ""){
-        $categories = $_GET["cat_name"];
+    if($_GET["category_name"] == "show_all" || $_GET["category_name"] == ""){
+        $categories = $_GET["categroy_name"];
         $params = [];
         $query = "SELECT * FROM posts";
     }else{
