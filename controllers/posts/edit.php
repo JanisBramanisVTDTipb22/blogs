@@ -33,6 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               die();
             }
 } 
-
-$title = "Create stuff";
+ 
+$query = "SELECT * FROM posts WHERE id = :id";
+$params = [":id" => $_GET["id"]];
+$post = $db->execute($query, $params)->fetch();
+$title = "Create a Post";
 require "views/posts/edit.view.php";

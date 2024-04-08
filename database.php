@@ -15,8 +15,8 @@ class Database {
     }
 
     public function execute($query_string, $params) {
-        //Sagatabot SQL izpildei
-        $query =$this->pdo->prepare($query_string);
+        //Sagatavot SQL izpildei
+        $query = $this->pdo->prepare($query_string);
         //Izpildit SQL
         $query->execute($params);
         //atgriezy rezultatus

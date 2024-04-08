@@ -5,5 +5,6 @@
             <a href="./story">History</a>
             <a href="./create">create a post</a>
             <a href="./show">show</a>
+            <a href="./edit">edit</a>
         </nav>
     </header>
